@@ -1,0 +1,719 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #130425; /* لون الخلفية العامة للصفحة */
+    color: #fff; /* لون النص العام */
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    background-color: #130425;
+    max-width: 600px;
+    margin: auto;
+}
+
+#div1 {
+    background-color: #130425;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#div1 .d-flex {
+    align-items: center;
+}
+
+#div1 .bi,
+#div1 span {
+    color: white;
+    margin-left: 5px;
+}
+
+#div1 img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+#div2 {
+    background-color: #130425;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#div2 .win-status {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-color: rgba(19, 1, 36, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#div2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#div2 .badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#div2 .d-flex {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#div2 .bi-heart {
+    color: #ff0000;
+    font-size: 20px;
+}
+
+#div3 {
+    background-color: #130425;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+#div3 .comment p {
+    margin-bottom: 5px;
+    color: #cfcfcf;
+}
+
+#div3 .comment p:first-child {
+    font-size: 12px;
+    color: #8c8c8c;
+}
+
+#div3 .text-warning {
+    color: #f0c36d !important;
+}
+
+#div3 .rounded-circle {
+    border: 2px solid #ffffff;
+    width: 40px;
+    height: 40px;
+}
+
+#div3 .d-flex img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#div3 .bi-hand-thumbs-up {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#div3 .btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#div3 .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#div3 .badge {
+    background-color: #130425;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+#div3 .d-flex {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#div3 .d-flex img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+#div3 .text-light {
+    font-size: 14px;
+}
+
+#div3 .small {
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+#div3 .bi {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+#div3 button {
+    margin: 5px;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+#div3 button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.comment p:first-child {
+    color: #f0c36d; /* لون النص الأول في التعليقات */
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+    #div1, #div2, #div3 {
+        padding: 10px;
+    }
+
+    #div2 .win-status, #div2 .badge, #div3 .badge {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    #div2 img, #div3 img {
+        width: 100%;
+    }
+
+    #div3 .d-flex img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #div1 img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #div1 span, #div3 button {
+        font-size: 12px;
+    }
+}
+
+#div1 {
+    background-color: #130425; /* لون خلفية القسم الأول */
+    padding: 10px; /* مسافة داخلية حول المحتوى */
+    border-radius: 10px; /* حواف دائرية للقسم */
+    display: flex; /* استخدام flexbox لتوزيع العناصر */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+    justify-content: space-between; /* توزيع العناصر بشكل متساوٍ أفقيًا */
+}
+
+#div1 .left-section,
+#div1 .middle-section,
+#div1 .right-section {
+    display: flex; /* توزيع العناصر داخل كل قسم */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+   background-color: #441044;
+   border-radius: 22px;
+    align-items: center;
+    padding: 6px;
+    align-items: center;
+}
+
+#div1 .left-section i,
+#div1 .right-section i {
+    font-size: 20px; /* حجم الأيقونات */
+    color: white; /* لون الأيقونات */
+    margin-right: 10px; /* مسافة بين الأيقونات والعناصر المجاورة */
+}
+
+#div1 .middle-section img {
+    width: 30px; /* حجم الصور الدائرية */
+    height: 30px;
+    border-radius: 50%; /* جعل الصور دائرية */
+    margin-right: 5px; /* مسافة بين الصور */
+    border: 2px solid #fff; /* حافة بيضاء حول الصور */
+}
+
+#div1 .middle-section .badge {
+    background-color: #130425;
+    color: #fff;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+#div1 .right-section img {
+    width: 35px; /* حجم الصورة الشخصية */
+    height: 35px;
+    border-radius: 50%; /* جعل الصورة دائرية */
+    margin-left: 10px; /* مسافة بين الصورة والعناصر المجاورة */
+}
+
+#div1 .right-section .user-info {
+    display: flex;
+    flex-direction: column; /* ترتيب المعلومات عموديًا */
+    align-items: flex-end; /* محاذاة النص إلى اليمين */
+    margin-right: 10px; /* مسافة بين النص والصورة */
+}
+
+#div1 .right-section .user-info span {
+    font-size: 12px; /* حجم النص */
+    color: #fff;
+}
+
+#div1 .user-info {
+    display: flex;
+    align-items: center;
+}
+
+#div1 #saudi-flag {
+    font-size: 20px;
+    margin-left: 10px;
+    color: white; /* تعديل اللون حسب الحاجة */
+}
+
+#div1 #plus-icon {
+    font-size: 20px;
+    margin-left: 5px;
+    color: white; /* تعديل اللون حسب الحاجة */
+}
+
+.cccccc{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+
+}
+.cccccc1{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+
+}
+.navbar {
+    background-color: #8450a1;
+    padding: 10px;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #dddddd;
+}
+
+.nav-item img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.nav-item {
+    margin: 0 5px;
+}
+
+/* تخصيص العرض للجوال */
+@media (max-width: 576px) {
+    #ex1 img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 0 5px;
+        }
+        
+        #ex2 img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        
+        }
+    .nav-item.d-lg-none:nth-child(n+4) {
+        display: none;
+    }
+}
+
+/* تخصيص العرض للشاشات الكبيرة */
+@media (min-width: 992px) {
+    #ex1 img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 5px;
+        }
+        
+        #ex2 img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        
+        }
+    .nav-item.d-none {
+        display: inline-block !important;
+    }
+}
+
+.close-btn {
+    color: white;
+    font-size: 24px;
+}
+#f {
+    width: 80%;
+    max-width: 800px;
+    background-color: #4a148c; /* اللون البنفسجي الداكن */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* لتفعيل شريط التمرير المخصص */
+    height: 400px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+}
+.bg {
+    background-color: #fff;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.left {
+    float: left;
+    padding-left: 10px;
+}
+
+.right {
+    float: right;
+    padding-right: 10px;
+}
+
+.html {
+    background: linear-gradient(to right, #951afe, #ffa40f);
+    width: 100%; /* Adjust to your desired width */
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    position: relative;
+}
+
+.html .left, .html .right {
+    position: absolute;
+    top: 0;
+}
+
+.html .left {
+    left: 10px;
+}
+
+.html .right {
+    right: 10px;
+}
+.circle-bg{
+
+    background-color: #130425;
+
+float:right;
+margin-right: 7%;
+
+}
+.box {
+    background-color: black;
+   margin-left:7%;
+
+    border-radius: 12px;
+    width: 350px;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+   align-content: center;
+   text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-info {
+    display: flex;
+    align-items: center;
+    background-color: #130425;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.time-info::before {
+    content: "🔥";
+    margin-left: 5px;
+}
+.df{
+    display: flex;
+
+ height: 100px;
+ width: 100%;
+}
+
+.progress-container {
+    width: 100%;
+    height: 40px;
+    background-color: #190531;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, purple 0%, orange 100%);
+    width: 100%; /* Adjust based on percentage */
+    border-radius: 10px;
+}
+
+.section {
+    background-color: #a279fc; /* لون بنفسجي فاتح */
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.section .icon {
+ margin: 3px;
+}
+
+.section .text {
+    white-space: nowrap;
+}
+
+
+#x {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-items: CENTER;
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    background-color: #130425;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+#ex1 img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin: 0 5px;
+}
+
+#ex2 img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+
+}
+
+#es1{
+
+width: 30%;
+
+}
+#es2{
+
+width: 30%;
+
+}
+.status {
+margin-left: 10px;
+font-size: 14px;
+display: flex;
+align-items: center;
+}
+
+.xc{
+
+background-color: #130425;
+border-radius: 10px;
+height: 50%;
+width: 20%;
+align-items: center;
+justify-content: center;
+align-content: center;
+
+display: flex;
+overflow: hidden;
+margin-right: 10%;
+margin-left: 10%;
+}
+.x{
+margin: 0px;
+
+}
+.progress {
+background-color: #8c00a0;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 10px 0 0 10px;
+
+}
+
+.score {
+font-size: 14px;
+display: flex;
+align-items: center;
+}
+
+.heart {
+color: #ff5e79;
+margin-left: 5px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(119, 7, 153);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dropdown-icons {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent wrapping to new line */
+}
+
+.dropdown-icons .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(233, 177, 247);
+    margin-right: 5px;
+    display: none; /* Start with hidden icons */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+.more-icon {
+    background-color: #0f0;
+}
+
+.dropdown-icons.show-all .icon {
+    display: inline-flex; /* Show all icons when 'show-all' class is added */
+}
+
+.dropdown-icons.show-more .more-icon {
+    display: inline-flex; /* Show the 'more' icon */
+}
+
+.zx {
+    margin-top:-50px;
+    direction:rtl;
+background-color: #05071f;
+color: aliceblue;
+
+
+}
+
+ ::-webkit-scrollbar {
+    width: 12px;
+    direction: rtl;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: #05071f;
+    direction: rtl;
+
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #05071f;
+    border-radius: 6px;
+    direction: rtl;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: #05071f;
+    direction: rtl;
+}
+
+.custom-scrollbar {
+    max-height: 300px;
+    overflow-y: auto;
+
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15 px;
+   text-align: center;
+}
+
+.comment img {
+    direction: rtl;
+    width:30px;
+    height:30px;
+    border-radius: 40%;
+    margin-right: 10 px;
+    text-align: center;
+}
+
+.comment-text {
+    background-color: #09011b;
+    padding: 10 px;
+    border-radius: 8 px;
+    flex: 1;
+
+}
